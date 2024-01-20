@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #f4f4f4;
+
+}
+
+.top-bar {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    top: 0;
+}
+
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-icon {
+    margin-right: 5px;
+}
+.user-menu {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: #333;
+    border-radius: 4px;
+    display: none;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.user-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.user-menu a:hover {
+    background-color: #555;
+}
+
+.user-menu.active {
+    display: flex;
+    width: 170px;
+}
+.sidebar {
+    width: 15%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: left 0.3s;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 15%;
+    margin-top: 50px ;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+}
+
+.menu-item a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-item a:hover {
+    background-color: #555;
+}
+
+.toggle-btn {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.toggle-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.giris-box {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.giris-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.giris-box select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.giris-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.giris-box button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .top-bar {
+        padding: 10px;
+        display: flex;
+        justify-content: end;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .sidebar {
+        left: -15%;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .user-name{
+        display: none;
+    }
+    .user-icon{
+        font-size: 23px;
+        margin-right: 15px;
+    }
+    .toggle-btn {
+        display: block;
+    }
+
+    .toggle-btn span {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .sidebar.active {
+        left: 0;
+        width: 80%;
+    }
+    .row {
+        flex-direction: column;
+    }
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#pagination {
+    margin-top: 10px;
+}
+
+#pagination button {
+    margin-right: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.no-data {
+    text-align: center;
+    font-style: italic;
+}
+
+.radio-group {
+    display: flex;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-right: 34px;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+.alert-box {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
